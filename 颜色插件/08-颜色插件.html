@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+<script src="./js/jquery-2.2.2.js"></script>
+<script src="./js/jquery.color.js"></script>
+<script>
+  /* 颜色插件
+      - 功能 - 让jq的动画支持颜色动画
+      - 下载引入该插件就可以让jq支持颜色的动画
+        - 可以直接百度找下载源，也可以去github上找，基本上只要是免费使用的，都可以在上面找到
+      - 但是要在主体之后引入
+      - 直接使用颜色的动画即可
+  */
+  $('.box').on('click',function(){
+    $(this).animate({
+      width: 400,
+      height : 400,
+      backgroundColor : 'yellow'
+    },3000)
+  })
+</script>
+</html>
